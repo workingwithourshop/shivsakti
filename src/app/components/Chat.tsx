@@ -35,7 +35,8 @@ export default function Chat() {
             type: data.mimeType
           }]);
         }
-      } catch (_) {
+      // eslint-disable-next-line no-empty
+      } catch {
         // Not JSON or not an image response
       }
     } catch (error) {
