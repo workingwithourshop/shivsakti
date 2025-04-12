@@ -18,14 +18,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <footer className="bg-gray-900 text-white py-12 px-4">
+        <footer className="bg-[#1B1B1B] text-white py-12 px-4">
           <div className="mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div>
                 <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-                <p className="mb-2">📍 Address: [Your Address]</p>
-                <p className="mb-2">📞 Phone: [Your Phone Number]</p>
-                <p className="mb-2">📧 Email: [Your Email]</p>
+                <p className="mb-2">📍 122 Adstress</p>
+                <p className="mb-2">📞 183, Incdstrrial.brea</p>
+                <p className="mb-2">📧 +01 56783 A5210</p>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
