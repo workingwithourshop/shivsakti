@@ -71,7 +71,7 @@ export default function Home() {
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noopener noreferrer"etrdytfgyoijpk[ots6rdytfuhoijopk[]]
         >
           <Image
             aria-hidden
