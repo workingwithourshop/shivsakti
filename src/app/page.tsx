@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section */}
-      <section className="relative h-[600px] w-full">
+      <section className="relative h-[750px] w-full">
         <div className="absolute inset-0">
           <Image
             src="/images/worker.jpg"
@@ -158,7 +158,7 @@ export default function Home() {
               Call Now
             </Button>
           </div>
-        </div>
+    </div>
       </section>
     </main>
   )
