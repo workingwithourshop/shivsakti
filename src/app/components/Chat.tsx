@@ -35,7 +35,7 @@ export default function Chat() {
             type: data.mimeType
           }]);
         }
-      } catch (e) {
+      } catch (_) {
         // Not JSON or not an image response
       }
     } catch (error) {
@@ -56,9 +56,9 @@ export default function Chat() {
             <p>Hello! I can help you with:</p>
             <ul className="text-left max-w-xs mx-auto mt-2">
               <li>• General questions (just ask!)</li>
-              <li>• Web searches ("search for...")</li>
-              <li>• Image generation ("generate image of...")</li>
-              <li>• Code assistance ("help me code...")</li>
+              <li>• Web searches (&quot;search for...&quot;)</li>
+              <li>• Image generation (&quot;generate image of...&quot;)</li>
+              <li>• Code assistance (&quot;help me code...&quot;)</li>
             </ul>
           </div>
         )}
