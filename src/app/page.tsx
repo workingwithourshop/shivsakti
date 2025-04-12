@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
 import Image from "next/image"
 
 export default function Home() {
@@ -13,7 +12,6 @@ export default function Home() {
             alt="SHIVSHAKTI Worker"
             fill
             className="object-fill object-[75%_center] brightness-[0.85]"
-
             priority
             quality={100}
           />
@@ -142,7 +140,7 @@ export default function Home() {
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h2 className="text-2xl font-bold mb-4">Great service!</h2>
               <p className="text-lg mb-4">Workers were skilled and punctual.</p>
-              <p className="text-gray-600">—HR Head, Reliable Pumps Co.</p>
+              <p className="text-gray-600">&mdash;HR Head, Reliable Pumps Co.</p>
             </div>
           </div>
         </div>
@@ -151,7 +149,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-12 px-12">
         <div className="mx-auto max-w-4xl">
-          <h2 className="mb-6 text-3xl font-bold text-[#1B1B1B]">Need Manpower? Let's Connect.</h2>
+          <h2 className="mb-6 text-3xl font-bold text-[#1B1B1B]">Need Manpower? Let&apos;s Connect.</h2>
           <div className="flex gap-4">
             <Button size="lg" className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded-md px-6">
               Get a Quote

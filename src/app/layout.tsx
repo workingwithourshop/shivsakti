@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,18 +31,18 @@ export default function RootLayout({
               <div>
                 <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul className="space-y-2">
-                  <li><a href="/" className="hover:text-gray-300">Home</a></li>
-                  <li><a href="/about" className="hover:text-gray-300">About</a></li>
-                  <li><a href="/services" className="hover:text-gray-300">Services</a></li>
-                  <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
+                  <li><Link href="/" className="hover:text-gray-300">Home</Link></li>
+                  <li><Link href="/about" className="hover:text-gray-300">About</Link></li>
+                  <li><Link href="/services" className="hover:text-gray-300">Services</Link></li>
+                  <li><Link href="/contact" className="hover:text-gray-300">Contact</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
                 <div className="flex space-x-4">
-                  <a href="#" className="hover:text-gray-300">Facebook</a>
-                  <a href="#" className="hover:text-gray-300">LinkedIn</a>
-                  <a href="#" className="hover:text-gray-300">Twitter</a>
+                  <Link href="#" className="hover:text-gray-300">Facebook</Link>
+                  <Link href="#" className="hover:text-gray-300">LinkedIn</Link>
+                  <Link href="#" className="hover:text-gray-300">Twitter</Link>
                 </div>
               </div>
             </div>
