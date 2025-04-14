@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -15,7 +15,7 @@ export default function Contact() {
   
   const [isSubmitted, setIsSubmitted] = useState(false);
   
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -23,7 +23,7 @@ export default function Contact() {
     }));
   };
   
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData);
