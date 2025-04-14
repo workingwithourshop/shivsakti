@@ -155,7 +155,7 @@ export default function Contact() {
                 <div className="bg-green-50 border border-green-200 text-green-800 rounded-lg p-6 text-center">
                   <div className="text-2xl mb-2">✅</div>
                   <h3 className="text-xl font-semibold mb-2">Thank you!</h3>
-                  <p>We've received your message and will get back to you shortly.</p>
+                  <p>We&apos;ve received your message and will get back to you shortly.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 bg-gray-50 p-6 rounded-lg">
