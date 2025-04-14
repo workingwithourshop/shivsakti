@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Link from "next/link"
 import { PageLayout } from "@/components"
 
@@ -10,30 +9,6 @@ export default function Services() {
       description="From factories to motor manufacturing units — we supply reliable, skilled, and unskilled labor across various sectors."
       showBackgroundImage={false}
     >
-      {/* Hero Section */}
-      <section className="relative h-[500px] sm:h-[600px] w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/worker.jpg"
-            alt="SHIVSHAKTI Manpower Services"
-            fill
-            className="object-cover brightness-[0.85]"
-            priority
-            quality={100}
-          />
-        </div>
-        <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 md:px-16 bg-gradient-to-r from-black/60 via-black/25 to-transparent">
-          <div className="max-w-[600px]">
-            <h1 className="mb-4 text-2xl sm:text-3xl md:text-[3.5rem] font-bold leading-[1.1] text-white">
-              Manpower Solutions Tailored for Industrial Needs
-            </h1>
-            <p className="mb-6 sm:mb-8 text-base sm:text-lg text-white/95">
-              From factories to motor manufacturing units — we supply reliable, skilled, and unskilled labor across various sectors.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Our Services */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
