@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -25,19 +26,23 @@ export default function Home() {
               Specialized in supplying skilled and unskilled labor to motor and manufacturing industries across india.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button 
-                size="lg" 
-                className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium w-full sm:w-auto"
-              >
-                Request Manpower
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-white text-black hover:bg-white/95 rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium border-0 w-full sm:w-auto"
-              >
-                Contact Us
-              </Button>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button 
+                  size="lg" 
+                  className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium w-full"
+                >
+                  Request Manpower
+                </Button>
+              </Link>
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="bg-white text-black hover:bg-white/95 rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium border-0 w-full"
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -151,14 +156,18 @@ export default function Home() {
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl font-bold text-[#1B1B1B]">Need Manpower? Let&apos;s Connect.</h2>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <Button size="lg" className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded-md px-6 w-full sm:w-auto">
-              Get a Quote
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-[#1B1B1B] text-[#1B1B1B] hover:bg-[#1B1B1B] hover:text-white rounded-md px-6 w-full sm:w-auto">
-              Call Now
-            </Button>
+            <Link href="/contact#quote-form" className="w-full sm:w-auto">
+              <Button size="lg" className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded-md px-6 w-full">
+                Get a Quote
+              </Button>
+            </Link>
+            <Link href="tel:+521021542215" className="w-full sm:w-auto">
+              <Button size="lg" variant="outline" className="border-2 border-[#1B1B1B] text-[#1B1B1B] hover:bg-[#1B1B1B] hover:text-white rounded-md px-6 w-full">
+                Call Now
+              </Button>
+            </Link>
           </div>
-    </div>
+        </div>
       </section>
     </main>
   )
