@@ -22,7 +22,7 @@ export default function About() {
               About SHIVSHAKTI – Your Trusted Manpower Partner
             </h1>
             <p className="mb-8 text-lg text-white/95">
-              Delivering skilled and reliable workforce solutions for India's leading factories and motor-based industries.
+              Delivering skilled and reliable workforce solutions for India&#39;s leading factories and motor-based industries.
             </p>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function About() {
             <div className="bg-white p-8 rounded-lg shadow-sm">
               <h3 className="text-2xl font-bold mb-4 text-[#1B1B1B]">Vision</h3>
               <p className="text-lg text-gray-700">
-                To be India's most reliable manpower solutions provider for the industrial and manufacturing sectors.
+                To be India&#39;s most reliable manpower solutions provider for the industrial and manufacturing sectors.
               </p>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm">
@@ -74,7 +74,7 @@ export default function About() {
             <div className="flex flex-col items-center text-center">
               <div className="mb-4 text-4xl text-[#F15A2B]">⚙️</div>
               <h3 className="text-xl font-semibold mb-2">Tailored Staffing Solutions</h3>
-              <p className="text-gray-700">Custom workforce plans to match your factory's unique needs</p>
+              <p className="text-gray-700">Custom workforce plans to match your factory&#39;s unique needs</p>
             </div>
             <div className="flex flex-col items-center text-center">
               <div className="mb-4 text-4xl text-[#F15A2B]">🚚</div>
@@ -160,4 +160,4 @@ export default function About() {
       </section>
     </main>
   )
-} 
+}
