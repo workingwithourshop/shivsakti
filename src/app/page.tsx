@@ -1,52 +1,13 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import HeroSection from "./components/HeroSection"
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      {/* Hero Section */}
-      <section className="relative h-[500px] sm:h-[600px] md:h-[750px] w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/worker.jpg"
-            alt="SHIVSHAKTI Worker"
-            fill
-            className="object-cover sm:object-fill object-[75%_center] brightness-[0.85]"
-            priority
-            quality={100}
-          />
-        </div>
-        <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 md:px-16 bg-gradient-to-r from-black/60 via-black/25 to-transparent">
-          <div className="max-w-[600px]">
-            <h1 className="mb-4 text-2xl sm:text-3xl md:text-[3.5rem] font-bold leading-[1.1] text-white">
-              Reliable Manpower for Your Industrial Needs
-            </h1>
-            <p className="mb-6 sm:mb-8 text-base sm:text-lg text-white/95">
-              Specialized in supplying skilled and unskilled labor to motor and manufacturing industries across india.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button 
-                  size="lg" 
-                  className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium w-full"
-                >
-                  Request Manpower
-                </Button>
-              </Link>
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="bg-white text-black hover:bg-white/95 rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium border-0 w-full"
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section with Framed Background */}
+      <HeroSection />
 
       {/* Who We Are Section */}
       <section className="py-8 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12">
