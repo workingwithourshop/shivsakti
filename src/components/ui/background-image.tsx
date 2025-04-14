@@ -53,6 +53,7 @@ export function BackgroundImage({
           backgroundImage: `url(${src})`,
           filter: `blur(${blurAmount}px)`,
         }}
+        aria-label={alt}
         aria-hidden="true"
       />
       
