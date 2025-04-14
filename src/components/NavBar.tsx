@@ -2,29 +2,15 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Handle dark mode toggle and localStorage
+  // Add scroll event listener
   useEffect(() => {
-    // Check localStorage for user preference
-    const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      setIsDarkMode(false);
-      document.documentElement.classList.remove("dark");
-    }
-
-    // Add scroll event listener
     const handleScroll = () => {
       if (window.scrollY > 20) {
         setIsScrolled(true);
@@ -36,17 +22,6 @@ export default function NavBar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    if (isDarkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    }
-  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -84,37 +59,8 @@ export default function NavBar() {
             <NavLink href="/contact" onClick={closeMenu}>Contact</NavLink>
           </nav>
 
-          {/* Right side items */}
-          <div className="hidden md:flex items-center space-x-4">
-            {/* Dark Mode Toggle */}
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
-            {/* CTA Button */}
-            <Link
-              href="/contact"
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded-full transition-colors duration-200"
-            >
-              Request Manpower
-            </Link>
-          </div>
-
           {/* Mobile Menu Button */}
-          <div className="flex md:hidden items-center space-x-4">
-            {/* Dark Mode Toggle (Mobile) */}
-            <button
-              onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
-              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
-            >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-
+          <div className="flex md:hidden">
             {/* Hamburger/Close Button */}
             <button
               onClick={toggleMenu}
@@ -135,15 +81,6 @@ export default function NavBar() {
             <NavLink href="/about" onClick={closeMenu} mobile>About</NavLink>
             <NavLink href="/services" onClick={closeMenu} mobile>Services</NavLink>
             <NavLink href="/contact" onClick={closeMenu} mobile>Contact</NavLink>
-            
-            {/* CTA Button (Mobile) */}
-            <Link
-              href="/contact"
-              className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-lg text-center transition-colors duration-200 mt-2"
-              onClick={closeMenu}
-            >
-              Request Manpower
-            </Link>
           </div>
         </div>
       )}
