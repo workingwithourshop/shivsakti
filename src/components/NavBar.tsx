@@ -48,7 +48,7 @@ export default function NavBar() {
             className="text-xl font-bold text-orange-600 dark:text-orange-400 transition-colors duration-200"
             onClick={closeMenu}
           >
-            ShivSakti
+            SHIVSHAKTI
           </Link>
 
           {/* Desktop Navigation */}
