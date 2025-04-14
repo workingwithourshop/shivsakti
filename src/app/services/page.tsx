@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import { PageLayout } from "@/components"
 
 export default function Services() {
   return (
-    <main className="flex min-h-screen flex-col">
+    <PageLayout
+      title="Manpower Solutions Tailored for Industrial Needs"
+      description="From factories to motor manufacturing units — we supply reliable, skilled, and unskilled labor across various sectors."
+    >
       {/* Hero Section */}
       <section className="relative h-[500px] sm:h-[600px] w-full">
         <div className="absolute inset-0">
@@ -30,7 +34,7 @@ export default function Services() {
       </section>
 
       {/* Our Services */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-10 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">What We Offer</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -69,7 +73,7 @@ export default function Services() {
       </section>
 
       {/* How It Works */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-10 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">How It Works</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -98,7 +102,7 @@ export default function Services() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-8 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">Industries We Serve</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -143,7 +147,7 @@ export default function Services() {
       </section>
 
       {/* Why Choose Our Services */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-8 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">Why Choose Our Services</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -186,7 +190,7 @@ export default function Services() {
       </section>
 
       {/* Client Testimonials */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-8 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">What Our Clients Say</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
@@ -205,33 +209,24 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm mt-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl font-bold text-[#1B1B1B]">Need Workforce Support? We&apos;re Just a Call Away.</h2>
+          <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl font-bold text-[#1B1B1B]">Ready to Get Started?</h2>
           <p className="mb-6 sm:mb-8 text-base sm:text-lg text-gray-700">
-            Let us solve your manpower challenges with our specialized workforce solutions.
+            Contact us today to discuss your manpower requirements and get a customized quote.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Link href="/contact#quote-form" className="w-full sm:w-auto">
+            <Link href="/contact" className="w-full sm:w-auto">
               <Button 
                 size="lg" 
                 className="bg-[#F15A2B] hover:bg-[#d94d22] text-white rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium w-full"
               >
-                Get a Quote
-              </Button>
-            </Link>
-            <Link href="https://wa.me/912223222323" className="w-full sm:w-auto">
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="bg-white text-black hover:bg-white/95 rounded px-6 sm:px-8 py-5 sm:py-6 text-base font-medium border-[#1B1B1B] border-2 w-full"
-              >
-                Talk to Our Team
+                Request Manpower
               </Button>
             </Link>
           </div>
         </div>
       </section>
-    </main>
+    </PageLayout>
   )
 } 

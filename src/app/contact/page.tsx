@@ -1,9 +1,9 @@
 'use client';
 
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Link from "next/link"
 import { useState, ChangeEvent, FormEvent } from "react";
+import { PageLayout } from "@/components"
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -43,33 +43,12 @@ export default function Contact() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col">
-      {/* Hero Section */}
-      <section className="relative h-[300px] sm:h-[400px] md:h-[500px] w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/worker.jpg"
-            alt="SHIVSHAKTI Contact"
-            fill
-            className="object-cover brightness-[0.85] object-center"
-            priority
-            quality={100}
-          />
-        </div>
-        <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 md:px-16 bg-gradient-to-r from-black/60 via-black/25 to-transparent">
-          <div className="max-w-[600px]">
-            <h1 className="mb-4 text-2xl sm:text-3xl md:text-[3.5rem] font-bold leading-[1.1] text-white">
-              Let&apos;s Get in Touch
-            </h1>
-            <p className="mb-6 sm:mb-8 text-base sm:text-lg text-white/95">
-              Whether you need manpower urgently or want to discuss a long-term partnership, our team is here to help.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <PageLayout
+      title="Let's Get in Touch"
+      description="Whether you need manpower urgently or want to discuss a long-term partnership, our team is here to help."
+    >
       {/* Contact Info + Form Section */}
-      <section id="contact-section" className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section id="contact-section" className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {/* Contact Information */}
@@ -285,6 +264,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </main>
+    </PageLayout>
   )
 } 

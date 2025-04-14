@@ -1,36 +1,15 @@
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 import Link from "next/link"
+import { PageLayout } from "@/components"
 
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col">
-      {/* Hero Section */}
-      <section className="relative h-[500px] sm:h-[600px] w-full">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/worker.jpg"
-            alt="SHIVSHAKTI Factory"
-            fill
-            className="object-cover brightness-[0.85]"
-            priority
-            quality={100}
-          />
-        </div>
-        <div className="relative z-10 h-full flex flex-col justify-center px-4 sm:px-8 md:px-16 bg-gradient-to-r from-black/60 via-black/25 to-transparent">
-          <div className="max-w-[600px]">
-            <h1 className="mb-4 text-2xl sm:text-3xl md:text-[3.5rem] font-bold leading-[1.1] text-white">
-              About SHIVSHAKTI – Your Trusted Manpower Partner
-            </h1>
-            <p className="mb-6 sm:mb-8 text-base sm:text-lg text-white/95">
-              Delivering skilled and reliable workforce solutions for India&#39;s leading factories and motor-based industries.
-            </p>
-          </div>
-        </div>
-      </section>
-
+    <PageLayout
+      title="About SHIVSHAKTI – Your Trusted Manpower Partner"
+      description="Delivering skilled and reliable workforce solutions for India's leading factories and motor-based industries."
+    >
       {/* Company Overview */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-4xl">
           <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">Who We Are</h2>
           <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 text-center">
@@ -43,7 +22,7 @@ export default function About() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
             <div className="bg-white p-6 sm:p-8 rounded-lg shadow-sm">
@@ -63,7 +42,7 @@ export default function About() {
       </section>
 
       {/* What Sets Us Apart */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-10 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">What Sets Us Apart</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
@@ -97,7 +76,7 @@ export default function About() {
       </section>
 
       {/* Key Stats */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 sm:mb-10 text-2xl sm:text-3xl font-bold text-[#1B1B1B] text-center">Key Stats</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
@@ -126,7 +105,7 @@ export default function About() {
       </section>
 
       {/* Team/Leadership */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl font-bold text-[#1B1B1B]">Our Leadership</h2>
           <p className="text-base sm:text-lg text-gray-700">
@@ -136,7 +115,7 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-gray-50">
+      <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm mt-8">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="mb-3 sm:mb-4 text-2xl sm:text-3xl font-bold text-[#1B1B1B]">Partner With SHIVSHAKTI Today</h2>
           <p className="mb-6 sm:mb-8 text-base sm:text-lg text-gray-700">
@@ -163,6 +142,6 @@ export default function About() {
           </div>
         </div>
       </section>
-    </main>
+    </PageLayout>
   )
 }
