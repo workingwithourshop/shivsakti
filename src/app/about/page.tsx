@@ -7,6 +7,7 @@ export default function About() {
     <PageLayout
       title="About SHIVSHAKTI – Your Trusted Manpower Partner"
       description="Delivering skilled and reliable workforce solutions for India's leading factories and motor-based industries."
+      showBackgroundImage={false}
     >
       {/* Company Overview */}
       <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">

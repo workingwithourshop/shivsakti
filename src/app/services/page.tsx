@@ -8,6 +8,7 @@ export default function Services() {
     <PageLayout
       title="Manpower Solutions Tailored for Industrial Needs"
       description="From factories to motor manufacturing units — we supply reliable, skilled, and unskilled labor across various sectors."
+      showBackgroundImage={false}
     >
       {/* Hero Section */}
       <section className="relative h-[500px] sm:h-[600px] w-full">

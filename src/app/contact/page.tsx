@@ -46,6 +46,7 @@ export default function Contact() {
     <PageLayout
       title="Let's Get in Touch"
       description="Whether you need manpower urgently or want to discuss a long-term partnership, our team is here to help."
+      showBackgroundImage={false}
     >
       {/* Contact Info + Form Section */}
       <section id="contact-section" className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-12 bg-white rounded-lg shadow-sm">
