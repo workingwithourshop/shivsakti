@@ -206,7 +206,7 @@ export default function Services() {
       {/* CTA Section */}
       <section className="py-16 px-12 bg-gray-50">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-[#1B1B1B]">Need Workforce Support? We're Just a Call Away.</h2>
+          <h2 className="mb-4 text-3xl font-bold text-[#1B1B1B]">Need Workforce Support? We&apos;re Just a Call Away.</h2>
           <p className="mb-8 text-lg text-gray-700">
             Let us solve your manpower challenges with our specialized workforce solutions.
           </p>
