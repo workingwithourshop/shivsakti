@@ -1,5 +1,5 @@
 import { ColumnDef } from "@tanstack/react-table";
-import { IContact } from "@/lib/types";
+import { IContact } from "@/lib/database/types/Contact";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {

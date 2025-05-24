@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { IContact } from "@/lib/types";
+import { IContact } from "@/lib/database/types/Contact";
 import {
   Dialog,
   DialogContent,
@@ -13,7 +13,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { format } from "date-fns";
 import { Button } from "@/components/ui/button";
 import { Copy, Check, User, Mail, FileText, Calendar } from "lucide-react";
-import { useUpdateContactStatus } from "@/lib/api/services/contactService";
+import { useUpdateContactStatus } from "@/lib/tanstack/hooks/contactQueries";
 import { toast } from "sonner";
 
 interface ContactDetailsModalProps {

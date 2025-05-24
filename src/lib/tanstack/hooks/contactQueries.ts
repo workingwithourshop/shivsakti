@@ -1,6 +1,8 @@
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient, useQuery } from "@tanstack/react-query";
 import { z } from "zod";
 import { sendEmail } from "@/lib/utils/Mailer/Mailer";
+import { IContact } from "@/lib/database/types/Contact"; // Assuming IContact is the type for a contact message
+
 // Define the expected shape of the data sent to the API
 // This should match the ContactPayloadSchema in the API route
 const contactPayloadSchema = z.object({
@@ -163,5 +165,56 @@ export const useUpdateContactStatus = (contactId: string) => {
       // Invalidate relevant queries to refresh the data
       queryClient.invalidateQueries({ queryKey: ["contacts"] });
     },
+  });
+};
+
+// Define the expected shape of the data returned by the GET /api/contact endpoint
+// It should match the structure returned by the API, likely an array of IContact
+const contactsResponseSchema = z.array(
+  z.object({
+    _id: z.string(), // or z.instanceof(ObjectId) if you transform it
+    name: z.string(),
+    email: z.string().email(),
+    subject: z.string(),
+    message: z.string(),
+    status: z.enum(["unread", "read", "replied"]),
+    createdAt: z.string().datetime(), // Or z.date() if transformed
+    clerkId: z.string().optional(),
+    // Add other fields from IContact if necessary
+  })
+);
+
+
+// Fetch contacts function
+const fetchContacts = async (filters: {
+  status?: "unread" | "read" | "replied";
+}): Promise<IContact[]> => {
+  const params = new URLSearchParams();
+  if (filters.status) {
+    params.append("status", filters.status);
+  }
+
+  const response = await fetch(`/api/contact?${params.toString()}`);
+
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Failed to fetch contacts");
+  }
+
+  const data = await response.json();
+  // Optionally validate the response data with Zod
+  // contactsResponseSchema.parse(data);
+  return data as IContact[]; // Cast or validate properly
+};
+
+
+// The TanStack Query hook for fetching contacts
+export const useContacts = (filters: {
+  status?: "unread" | "read" | "replied";
+}) => {
+  return useQuery<IContact[], Error>({
+    queryKey: ["contacts", filters], // Include filters in the query key
+    queryFn: () => fetchContacts(filters),
+    // Optional: Add options like staleTime, cacheTime, refetchInterval etc.
   });
 };

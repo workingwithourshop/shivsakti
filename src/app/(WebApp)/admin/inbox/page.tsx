@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { DataTable } from "@/components/data-table";
 import { columns } from "./columns";
-import { useContacts } from "@/lib/api/services/contactService";
+import { useContacts } from "@/lib/tanstack/hooks/contactQueries";
 import { ClerkLoaded, ClerkLoading, useAuth } from "@clerk/nextjs";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ContactDetailsModal } from "./contact-details-modal";
